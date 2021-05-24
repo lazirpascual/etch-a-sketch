@@ -28,8 +28,12 @@ function removeAllBlocks(parent) {
 const sizeButton = document.querySelector('#switch');
 sizeButton.addEventListener('click', function (e) {
     blockSize = prompt("Enter the Grid Size: ");
-    removeAllBlocks(blockContainer);  // remove all blocks to get rid of all colours (classes)
-    createBlock(blockSize); // recreate block to the size we want
+    if (blockSize >= 100 ) {
+        alert("Must Enter a Size Less Than 100.")
+    } else {
+        removeAllBlocks(blockContainer);  // remove all blocks to get rid of all colours (classes)
+        createBlock(blockSize); // recreate block to the size we want
+    }
 });
 
 // clears block on button click
