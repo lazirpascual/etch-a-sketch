@@ -1,6 +1,6 @@
 # Etch A Sketch 
 
-This is a JavaScipt project that allows you to hover your mouse over a sketch board, allowing you to create sketches or drawings using only HTML, CSS and Vanilla JS.
+This is a JavaScipt project that allows you to hover your mouse over a sketch board, allowing you to create sketches or drawings.
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/courses/foundations/lessons/etch-a-sketch-project).
 
