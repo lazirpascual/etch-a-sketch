@@ -18,7 +18,7 @@ function createBlock(size) {
 }
 
 // removes all existing child nodes in specified node
-function removeAllChildNodes(parent) {
+function removeAllBlocks(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
@@ -33,6 +33,6 @@ blockContainer.addEventListener('mouseover', function (e) {
 const sizeButton = document.querySelector('#switch');
 sizeButton.addEventListener('click', function (e) {
     let blockSize = prompt("Enter the Grid Size: ");
-    removeAllChildNodes(blockContainer);
+    removeAllBlocks(blockContainer);
     createBlock(blockSize);
 });

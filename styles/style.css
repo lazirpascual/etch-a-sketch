@@ -2,24 +2,51 @@ body,html {
     color: rgb(2, 2, 2);
     margin: 0;
     padding: 0;
-    font-family:fantasy;
+    font-family:'VT323', monospace;
     font-style: inherit;
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 35px;
+    background-color: rgb(218, 213, 219);
   }
 
 .main-container {
-    margin-top: 2em;
     display: grid;
     width: 700px;
     height: 700px;
     margin: 50px auto auto auto;
-    
+    box-shadow: 10px 10px;
+    border-radius: 5px;
+    border: 5px solid white;
 }
 
 .block-container {
     border: 1px solid black;
+}
+
+.button-container {
+    width: 80px;
+    font-size: 30px;
+    background-color: rgb(47, 45, 38);
+    color: rgb(47, 45, 38);
+    box-shadow: 5px 5px;
+    outline: none;
+    margin: auto;
+    appearance: auto;
+    display: inline-block;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+.button-container:hover {
+    transform: scale(1.2);
 }
 
 .grey-box {
