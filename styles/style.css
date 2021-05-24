@@ -15,7 +15,7 @@ body,html {
     display: grid;
     width: 700px;
     height: 700px;
-    margin: 50px auto auto auto;
+    margin: 20px auto auto auto;
     box-shadow: 10px 10px;
     border-radius: 5px;
 }
@@ -25,27 +25,26 @@ body,html {
 }
 
 .button-container {
-    width: 80px;
-    font-size: 30px;
-    background-color: rgb(47, 45, 38);
-    color: rgb(47, 45, 38);
-    box-shadow: 5px 5px;
-    outline: none;
-    margin: auto;
-    appearance: auto;
-    display: inline-block;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    margin: 0em;
-    font: 400 13.3333px Arial;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px 50px 50px;
+    flex-wrap: wrap;
 }
-.button-container:hover {
-    transform: scale(1.1);
+
+.buttons {
+    font-family: Audiowide, cursive;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+    line-height: 27px;
+    background-color: rgb(199, 194, 194);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.buttons:hover {
+    transform: scale(1.2);
 }
 
 .grey-box {
