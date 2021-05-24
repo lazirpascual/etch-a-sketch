@@ -1,0 +1,14 @@
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(16, auto);
+}
+
+.block-container {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.block-container:hover {
+    background-color: grey;
+}
+
