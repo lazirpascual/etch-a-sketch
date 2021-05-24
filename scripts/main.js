@@ -2,18 +2,18 @@
 const blockContainer = document.querySelector('#main');
 
 // create 16x16 blocks upon loading page
-let INITIAL_SIZE = 16;
-createBlock(INITIAL_SIZE);
+let blockSize = 16; 
+createBlock(blockSize);
 
 // create the full block given the size
-function createBlock(size) {
-    for (let i = 0; i < size; i++) {
-        for (let j = 0; j < size; j++) { 
+function createBlock(blockSize) {
+    for (let i = 0; i < blockSize; i++) {
+        for (let j = 0; j < blockSize; j++) { 
             const squareBlock = document.createElement('div');
             squareBlock.classList.add('block-container');
             blockContainer.appendChild(squareBlock);
         }
-        blockContainer.style.gridTemplateColumns=`repeat(${size},auto)`;
+        blockContainer.style.gridTemplateColumns=`repeat(${blockSize},auto)`;
     }
 }
 
@@ -27,29 +27,62 @@ function removeAllBlocks(parent) {
 // change size of block on button click
 const sizeButton = document.querySelector('#switch');
 sizeButton.addEventListener('click', function (e) {
-    let blockSize = prompt("Enter the Grid Size: ");
+    blockSize = prompt("Enter the Grid Size: ");
+    removeAllBlocks(blockContainer);  // remove all blocks to get rid of all colours (classes)
+    createBlock(blockSize); // recreate block to the size we want
+});
+
+// clears block on button click
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click', function (e) {
     removeAllBlocks(blockContainer);
     createBlock(blockSize);
 });
 
+// removes all other existing colours and adds colour we want
+function changeColour(colourToAdd) {
+    let colourClasses = ['grey-box', 'red-box', 'green-box', 'blue-box', 'pink-box'];
+
+    blockContainer.addEventListener('mouseover', function (e) {
+        /* remove all other colour before adding colour we want */
+        for (let i = 0; i < 5; i ++) {
+            e.target.classList.remove(colourClasses[i]);
+        }
+        e.target.classList.add(colourToAdd); 
+        });
+}
+
+// set initial mouse hover color to grey
 blockContainer.addEventListener('mouseover', function (e) {
     e.target.classList.add('grey-box');
 });
 
-// change color to grey on mouse hover
+// change to grey on mouse hover
 const blackButton = document.querySelector('#black');
 blackButton.addEventListener('click', function (e) {
-    blockContainer.addEventListener('mouseover', function (e) {
-        e.target.classList.remove('red-box');
-        e.target.classList.add('grey-box');
-    });
+    changeColour('grey-box');
 });
 
-// change to random colours on mouse hover
-const rgbButton = document.querySelector('#rgb');
-rgbButton.addEventListener('click', function (e) {
-    blockContainer.addEventListener('mouseover', function (e) {
-        e.target.classList.remove('grey-box');
-        e.target.classList.add('red-box');
-    });
+// change to green on mouse hover
+const greenButton = document.querySelector('#green');
+greenButton.addEventListener('click', function (e) {
+    changeColour('green-box');
+});
+
+// change to red on mouse hover
+const redButton = document.querySelector('#red');
+redButton.addEventListener('click', function (e) {
+    changeColour('red-box');
+});
+
+// change to blue on mouse hover
+const blueButton = document.querySelector('#blue');
+blueButton.addEventListener('click', function (e) {
+    changeColour('blue-box');
+});
+
+// change to pink on mouse hover
+const pinkButton = document.querySelector('#pink');
+pinkButton.addEventListener('click', function (e) {
+    changeColour('pink-box');
 });

@@ -29,6 +29,7 @@ body,html {
     justify-content: center;
     margin: 50px 50px 50px 50px;
     flex-wrap: wrap;
+    
 }
 
 .buttons {
@@ -36,24 +37,42 @@ body,html {
     padding: 20px;
     border-radius: 5px;
     font-size: 14px;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     color: rgb(0, 0, 0);
     line-height: 27px;
     background-color: rgb(199, 194, 194);
     border: 1px solid rgb(0, 0, 0);
+    font-size: 20px;
+    border-style: outset;
 }
 
 .buttons:hover {
     transform: scale(1.2);
+    background-color: rgb(141, 138, 138);
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223, 225, 229, 0);
+    border-style: inset;
+    cursor: pointer;
 }
 
 .grey-box {
     background-color: grey;
 }
 
+.green-box {
+    background-color:seagreen;
+}
+
+.blue-box {
+    background-color: cyan;
+}
+
 .red-box {
     background-color: red;
 }
 
+.pink-box {
+    background-color: pink;
+}
 
 
