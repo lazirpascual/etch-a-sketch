@@ -1,4 +1,15 @@
+body,html {
+    color: rgb(2, 2, 2);
+    margin: 0;
+    padding: 0;
+    font-family:fantasy;
+    font-style: inherit;
+    font-size: 20px;
+    text-align: center;
+  }
+
 .main-container {
+    margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(16, auto);
 }
@@ -8,7 +19,9 @@
     padding: 20px;
 }
 
-.block-container:hover {
+.grey-box {
     background-color: grey;
 }
+
+
 
