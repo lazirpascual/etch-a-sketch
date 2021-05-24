@@ -24,15 +24,32 @@ function removeAllBlocks(parent) {
     }
 }
 
-// change color to grey on mouse hover
-blockContainer.addEventListener('mouseover', function (e) {
-    e.target.classList.add('grey-box');
-});
-
 // change size of block on button click
 const sizeButton = document.querySelector('#switch');
 sizeButton.addEventListener('click', function (e) {
     let blockSize = prompt("Enter the Grid Size: ");
     removeAllBlocks(blockContainer);
     createBlock(blockSize);
+});
+
+blockContainer.addEventListener('mouseover', function (e) {
+    e.target.classList.add('grey-box');
+});
+
+// change color to grey on mouse hover
+const blackButton = document.querySelector('#black');
+blackButton.addEventListener('click', function (e) {
+    blockContainer.addEventListener('mouseover', function (e) {
+        e.target.classList.remove('red-box');
+        e.target.classList.add('grey-box');
+    });
+});
+
+// change to random colours on mouse hover
+const rgbButton = document.querySelector('#rgb');
+rgbButton.addEventListener('click', function (e) {
+    blockContainer.addEventListener('mouseover', function (e) {
+        e.target.classList.remove('grey-box');
+        e.target.classList.add('red-box');
+    });
 });
